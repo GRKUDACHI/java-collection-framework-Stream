@@ -2,7 +2,7 @@
 //abstract consisit both method without body and concreat method (method with body)
 // we cannot create object for abstract class and we can access by creating child or sub class object 
 // we cannot override
-//we cannot achive 100 of abstraction because its contain both method without body and concreat method (method with body)
+//we cannot achive 100% of abstraction because its contain both method without body and concreat method (method with body)
 
 public class tut
 {
