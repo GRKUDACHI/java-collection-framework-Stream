@@ -16,6 +16,19 @@ class Mycomparator implements Comparator<Integer>
     }
 }
 
+class fruitcompare implements Comparator<String>
+{
+
+    @Override
+    public int compare(String o1, String o2)
+    {
+
+        return  o1.length() - o2.length() ; // if the result positive the Sorted order in ASC
+
+        //  return   o2.length() - o1.length() ;  //if the result negative  then sorted DESC
+    }
+}
+
 public class Comparators
 {
     public static void main(String[] args)
@@ -29,5 +42,13 @@ public class Comparators
 
         num.sort(new Mycomparator());
         System.out.println(num); 
+
+        
+        String[] fruit = {"Orange", "Banana", "Apple", "Pineapple", "Watermelon"};
+
+        List<String> frut = Arrays.asList(fruit);
+        frut.sort(new fruitcompare());
+        System.out.println(frut);
+        
     }
 }
