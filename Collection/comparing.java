@@ -5,14 +5,14 @@ class comparing
     public static void main (String[] args)
     {
         List<Student> stu = new ArrayList<>();
-        
+
         stu.add(new Student("happy",8));
         stu.add(new Student("harry",9));
         stu.add(new Student("raj",6));
         stu.add(new Student("pratik",7));
 
-        Comparator<Student> compare = Comparator.comparing(Student::getScgpa).reversed();
-
+        Comparator<Student> comparator = Comparator.comparing(Student::getScgpa).reversed();
+        stu.sort(comparator);
         for(Student s : stu)
         {
             System.out.println(s.getName()+" : "+s.getScgpa());
