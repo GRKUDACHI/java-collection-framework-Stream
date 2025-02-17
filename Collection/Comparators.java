@@ -23,7 +23,7 @@ class fruitcompare implements Comparator<String>
 {
 
     @Override
-    public int compare(String o1, String o2)
+    public String compare(String o1, String o2)
     {
 
         return  o1.length() - o2.length() ; // if the result positive the Sorted order in ASC
