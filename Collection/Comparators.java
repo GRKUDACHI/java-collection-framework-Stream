@@ -11,16 +11,19 @@ class Mycomparator implements Comparator<Integer>
 {
 
     @Override
-    public int compare(Integer o1, Integer o2) {
-        return o1 - o2;
+    public int compare(Integer o1, Integer o2) 
+    {
+        return o1 - o2; // if the result positive the Sorted order in ASC else DESC order
     }
 }
+
+
 
 class fruitcompare implements Comparator<String>
 {
 
     @Override
-    public int compare(String o1, String o2)
+    public String compare(String o1, String o2)
     {
 
         return  o1.length() - o2.length() ; // if the result positive the Sorted order in ASC
@@ -43,12 +46,10 @@ public class Comparators
         num.sort(new Mycomparator());
         System.out.println(num); 
 
-        
         String[] fruit = {"Orange", "Banana", "Apple", "Pineapple", "Watermelon"};
 
         List<String> frut = Arrays.asList(fruit);
         frut.sort(new fruitcompare());
         System.out.println(frut);
-        
     }
 }
