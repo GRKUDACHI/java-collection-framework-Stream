@@ -50,6 +50,7 @@ public class Comparators
 
         List<String> frut = Arrays.asList(fruit);
         frut.sort(new fruitcompare());
+        // frut.sort((String a, String b) -> a.length() - b.length());
         System.out.println(frut);
     }
 }
