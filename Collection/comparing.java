@@ -5,7 +5,6 @@ class comparing
     public static void main (String[] args)
     {
         List<Student> stu = new ArrayList<>();
-
         stu.add(new Student("happy",8));
         stu.add(new Student("harry",9));
         stu.add(new Student("raj",6));
@@ -16,6 +15,8 @@ class comparing
         for(Student s : stu)
         {
             System.out.println(s.getName()+" : "+s.getScgpa());
+            System.out.println(s.getTotlaCgpa());
+
         }
     }
 }
@@ -23,6 +24,7 @@ class Student
 {
    private String name ;
    private int scgpa;
+   private int totlaCgpa =10;
 
    public Student(String name, int scgpa)
    {
@@ -39,4 +41,13 @@ class Student
    {
     return scgpa;
    }
+
+   public int getTotlaCgpa()
+   {
+    return totlaCgpa;
+   }
+//    public void setTotlaCgpa(int c)
+//    {
+//      totlaCgpa = c;
+//    } 
 }
