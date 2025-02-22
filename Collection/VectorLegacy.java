@@ -24,6 +24,17 @@ public class VectorLegacy
 {
     public static void main (String[] args)
     {
+
+         //we can construct specific capacity increment List<Integer> vt = new Vector<>(5,3);
+        // we can also construct with collection
+        LinkedList<Integer> lkn = new LinkedList<>();
+        lkn.add(89);
+        lkn.add(90);
+        lkn.add(78);
+
+        List<Integer> vt = new Vector<>(lkn); // we can construct with specified collection
+        vt.sort(new sortvector());
+        System.out.println(vt);
         Vector<Integer> vtc = new Vector<>();
         vtc.add(40);
         vtc.add(90);
