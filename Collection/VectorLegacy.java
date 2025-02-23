@@ -35,8 +35,6 @@ public class VectorLegacy
         List<Integer> vt = new Vector<>(lkn); // we can construct with specified collection
         vt.sort(new sortvector());
         System.out.println(vt);
-
-
         Vector<Integer> vtc = new Vector<>();
         vtc.add(40);
         vtc.add(90);
