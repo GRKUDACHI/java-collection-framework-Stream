@@ -10,12 +10,12 @@ class comparing
         stu.add(new Student("raj",6));
         stu.add(new Student("pratik",7));
 
-        Comparator<Student> comparator = Comparator.comparing(Student::getScgpa).reversed();
+        Comparator<Student> comparator = Comparator.comparing(Student::getScgpa).reversed().thenComparing(Student::getName);
         stu.sort(comparator);
         for(Student s : stu)
         {
             System.out.println(s.getName()+" : "+s.getScgpa());
-            System.out.println(s.getTotlaCgpa());
+            // System.out.println(s.getTotlaCgpa());
 
         }
     }
@@ -24,7 +24,7 @@ class Student
 {
    private String name ;
    private int scgpa;
-   private int totlaCgpa =10;
+//    private int totlaCgpa =10;
 
    public Student(String name, int scgpa)
    {
@@ -42,10 +42,10 @@ class Student
     return scgpa;
    }
 
-   public int getTotlaCgpa()
-   {
-    return totlaCgpa;
-   }
+//    public int getTotlaCgpa()
+//    {
+//     return totlaCgpa;
+//    }
 //    public void setTotlaCgpa(int c)
 //    {
 //      totlaCgpa = c;
