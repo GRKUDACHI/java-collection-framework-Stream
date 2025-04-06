@@ -3,11 +3,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-// in java Map is an object that maps keys to value
+// in java Map is an object that  keys maps to value
 //it cannot contain duplicate keys and each key map to at most one value
 //Key-Value pair : Each entry in map consists of a key and a value
 //Unique key : no two entries can have the same key
-//one value per key : each key maps to a single key
+//one value per key : each key maps to a single value
 
 public class demohashmap
 {
