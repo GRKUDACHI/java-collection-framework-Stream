@@ -1,5 +1,10 @@
 import java.util;
 
+//Stack is java collection Extends Vector
+//Stack follows LIFO principle Last in First Out
+//Stack is Sub Class of vector its inherit all vector Feature
+//Since its extends Vector then its Thred-safe class
+
 public class StackLIFO
 {
     public static void main (String[] args)
