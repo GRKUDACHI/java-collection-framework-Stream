@@ -7,7 +7,7 @@ import java.util.Set;
 //it cannot contain duplicate keys and each key map to at most one value
 //Key-Value pair : Each entry in map consists of a key and a value
 //Unique key : no two entries can have the same key
-//one value per key : each key maps to a single value
+//one value per key : each key maps to a single value 
 
 public class demohashmap
 {
