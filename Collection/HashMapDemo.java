@@ -43,7 +43,9 @@ import java.util.Set;
 //If collision Elements  are more than 8 then convert to RED-black tree 0(n) to 0(log n)
 
 
-//**************Resizing factor (ReHashing)************88
+//**************Resizing factor (ReHashing)***************
+
+
 //Load factor 0.75 (by default )
 //Capacity initial 16
 //Resize Happens when 16*0.75 =12
