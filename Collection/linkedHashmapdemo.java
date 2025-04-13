@@ -2,10 +2,13 @@
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+//Elements are returned in the order they were inserted.
 //LinkedHashmap is Extend HashMap
 //LinkedHashMap manages Order
 //LinkedHashmap used Doubly linked list
-//for insert and remove o(n) Comparing to Hashmap LinkedHashMap is slow due to over head memory for Doubly linked List
+//Faster Iteration than HashMap Because it uses a doubly-linked list to maintain the order of entries.
+//for insert and remove o(n) Comparing to Hashmap LinkedHashMap is slow due to over head memory for Doubly linked List.
+//If constructed with accessOrder = true, the map orders entries by access time (used in LRU caches)
 
 public class linkedHashmapdemo
 {
