@@ -19,6 +19,9 @@ public class linkedHashmapdemo
         lnkhmap.put("Water Melon",60);
         lnkhmap.put("Banana",50);
 
+        lnkhmap.get("Apple");
+        lnkhmap.get("Water Melon");
+
         System.out.println(lnkhmap);
         for(Map.Entry<String,Integer>lnmap : lnkhmap.entrySet())
         {
