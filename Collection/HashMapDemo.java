@@ -22,7 +22,7 @@ import java.util.Set;
 //4) HashFunction() ->a)Hash function calls hashCode() function to get a Hash
 //                    b)Hashing to calculate the index in the Array(Called Bucket )
 //                    c) If no Collision Value stored in directly
-//                    d) If Collision having Linked List used where stored in bucket which elements are fet same index
+//                    d) If Collision having Linked List used where stored in bucket which elements are fit same index
 
 
 
