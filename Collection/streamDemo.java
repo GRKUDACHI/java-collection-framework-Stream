@@ -29,8 +29,9 @@ public class streamDemo
         fruits.stream().forEach(System.out::println);
 
        //Stream Map() method
-        List<String> fruit = Arrays.asList("Apple", "Banana", "Orange");
+        List<String> fruit = Arrays.asList("Banana", "Apple", "Orange");
         System.out.println("String list "+fruit);
+        fruit.sort(new sort_string());
         List<Integer>fruitLength = fruit.stream().map(String::length)
                 .collect(Collectors.toList());
         System.out.println("string convert with there length "+fruitLength);
@@ -116,6 +117,38 @@ public class streamDemo
         .map(d->d.getValue().toUpperCase())
         .forEach(System.out::println);
 
+        Hashtable<String ,Integer> wek = new Hashtable<>();
+        wek.put("Mon",1);
+        wek.put("tue",2);
+        wek.put("wed",3);
+        wek.put("thu",4);
 
+        System.out.println(wek);
+       
+       //stream with terminal operation 
+        wek.entrySet().stream().forEach(System.out::println);
+
+
+    }
+}
+
+//Comparator is interface 
+//Comparator to used Custome sort method for list and set interface 
+//if return positive then sorted with ASC
+//if return Negative then sorted with DESC
+class sort implements Comparator<Integer>
+{
+
+    @Override
+    public int compare(Integer o1, Integer o2) {
+        return o1-o2;
+    }
+}
+
+class sort_string implements Comparator<String>
+{
+    @Override
+    public int compare(String o1, String o2) {
+        return o1.length() - o2.length();
     }
 }
