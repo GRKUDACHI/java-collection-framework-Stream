@@ -25,6 +25,8 @@ public class streamDemo
                 .collect(Collectors.toList());
         System.out.println(filteredFruits);
 
+        fruits.stream().forEach(System.out::println);
+
        //Stream Map() method
         List<String> fruit = Arrays.asList("Apple", "Banana", "Orange");
         System.out.println("String list "+fruit);
@@ -52,11 +54,17 @@ public class streamDemo
         System.out.println("sorted list"+sort_num);
 
        //distinct() toremoved duplicate from collection 
-       
+
         List<Integer>numbers = Arrays.asList(90,30,40,90,50,40,60,10);
         System.out.println("list numbesr "+numbers);
         List<Integer>removed_duplicate = numbers.stream().distinct().toList();
         System.out.println("Removed duplicate number "+removed_duplicate);
+
+        //treminal Operations 
+
+        
+        List<String>shop = Arrays.asList("Milk","Egg","bread");
+        shop.stream().forEach(System.out::println);
 
 
     }
