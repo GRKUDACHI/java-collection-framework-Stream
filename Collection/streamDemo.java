@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.*;
 
 //Stream is a sequence of elements that can be processed in a functional style
 //by using Lambda Expression
@@ -65,6 +66,55 @@ public class streamDemo
         
         List<String>shop = Arrays.asList("Milk","Egg","bread");
         shop.stream().forEach(System.out::println);
+
+         HashMap<Integer,String > student = new HashMap<>();
+        student.put(101,"girish");
+        student.put(102,"Happy");
+        student.put(103,"Rakes");
+
+        System.out.println(student);
+
+        for(Map.Entry<Integer,String > st : student.entrySet())
+        {
+            System.out.println(st.getKey()+ ":" +st.getValue());
+        }
+
+        student.entrySet().stream().forEach(System.out::println);
+
+
+        LinkedHashMap<Integer,String >basket = new LinkedHashMap<>();
+        basket.put(50,"Apple");
+        basket.put(10,"Orange");
+        basket.put(5,"Water Melon");
+        basket.put(30,"Banana");
+        System.out.println(basket);
+
+        for(Map.Entry<Integer,String> shops : basket.entrySet())
+        {
+            System.out.println(shops.getKey()+" : "+shops.getValue());
+        }
+
+        //Stream Terminal method
+
+        basket.entrySet().stream().forEach(System.out::println);
+
+        basket.entrySet().stream().map(entry-> entry.getValue().toUpperCase()).forEach(System.out::println);
+
+
+        TreeMap<Integer,String >dept = new TreeMap<>();
+        dept.put(100,"Development team");
+        dept.put(20,"hr team");
+        dept.put(35,"Tester team");
+        System.out.println(dept);
+
+        for(Map.Entry<Integer,String >dp :dept.entrySet())
+        {
+            System.out.println(dp.getKey()+" : "+dp.getValue());
+        }
+
+        dept.entrySet().stream()
+        .map(d->d.getValue().toUpperCase())
+        .forEach(System.out::println);
 
 
     }
