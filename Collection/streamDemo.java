@@ -51,6 +51,8 @@ public class streamDemo
         List<Integer>sort_num = listnumber.stream().sorted().toList();
         System.out.println("sorted list"+sort_num);
 
+       //distinct() toremoved duplicate from collection 
+       
         List<Integer>numbers = Arrays.asList(90,30,40,90,50,40,60,10);
         System.out.println("list numbesr "+numbers);
         List<Integer>removed_duplicate = numbers.stream().distinct().toList();
