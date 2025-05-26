@@ -133,6 +133,7 @@ public class streamDemo
                 .filter(num -> num % 2 == 0)
                 .sorted()
                 .distinct()
+                .limit(5)
                 .collect(Collectors.toList());
         System.out.println(even_numbers);
         
