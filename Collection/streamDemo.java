@@ -128,6 +128,16 @@ public class streamDemo
        //stream with terminal operation 
         wek.entrySet().stream().forEach(System.out::println);
 
+        List<Integer> list_num = Arrays.asList(2,4,8,9,20,45,37,300,69,92,4,6,1,19,38,62,58);
+        List<Integer> even_numbers = list_num.stream()
+                .filter(num -> num % 2 == 0)
+                .sorted()
+                .distinct()
+                .collect(Collectors.toList());
+        System.out.println(even_numbers);
+        
+        even_numbers.stream().forEach(System.out::println);
+
 
     }
 }
