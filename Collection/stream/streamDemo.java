@@ -151,6 +151,14 @@ public class streamDemo
         .collect(Collectors.counting()));
         System.out.println(lng);
 
+         //removed duplicate Elements the used toSet
+
+        List<String>all_name = Arrays.asList("Happy","girish","Rakesh","Happy");
+
+        Set<String> user_name = all_name.stream().collect(Collectors.toSet());
+        
+        System.out.println(user_name);
+
 
     }
 }
