@@ -140,14 +140,15 @@ public class streamDemo
         even_numbers.stream().forEach(System.out::println);
 
        //Common Controller 
-       
+
         List<String >names = Arrays.asList("Java ","stream ","API");
         String name = names.stream()
                 .collect(Collectors.joining());
         System.out.println(name);
 
         List<String> lang = Arrays.asList("Java","hibernate","Spring boot");
-        String lng = String.valueOf(lang.stream().collect(Collectors.counting()));
+        String lng = String.valueOf(lang.stream()
+        .collect(Collectors.counting()));
         System.out.println(lng);
 
 
