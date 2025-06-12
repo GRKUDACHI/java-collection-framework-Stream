@@ -33,5 +33,15 @@ public class linkedHashmapdemo
             System.out.println(k);
         }
 
+        LinkedHashMap<String ,String>fruite = new LinkedHashMap<>(11,0.75f,true);
+        fruite.put("Apple","Big Basket");
+        fruite.put("orange","zepto");
+        fruite.put("Banana","BlinkIT");
+        fruite.get("Apple");
+
+        System.out.println(fruite);
+
+        fruite.entrySet().stream().forEach(System.out::println);
+
     }
 }
