@@ -80,12 +80,13 @@ public class StreamsQuestions
         List<String>sort = Arrays.asList("apple","orange","banana","water melon","graphs","berry","strawberry","berry");
 
                  sort.stream()
-//               .sorted((o1,o2) ->o1.length() - o2.length())
-//               .sorted(Comparator.comparing(String::length)
+                //.sorted((o1,o2) ->o1.length() - o2.length())
+                // .sorted(Comparator.comparing(String::length)
                  .sorted(Comparator.comparing(str->str.length()))
                   .forEach(System.out::println);
 
         //Find the longest Word in the list with uppercase
+        
         System.out.println("Find the longest Word in the list");
         List<String>long_word = Arrays.asList("apple","orange","banana","water melon","graphs","berry","strawberry","berry");
         String longestWor = long_word.stream()
@@ -94,6 +95,29 @@ public class StreamsQuestions
         .orElse("not found words");
 
         System.out.println(longestWor);
+
+
+        //Find the Vowels from this list 
+
+        System.out.println("Find the Vowels from this list ");
+        String[] vowel = {"apple","orange","banana","water melon","graphs","berry","strawberry","berry"};
+
+        List<String> vowels = Arrays.asList(vowel);
+
+        vowels.stream()
+        .filter(vw->vw.matches(".*[aeiou]*."))
+        .forEach(System.out::println);
+
+        //Removed Null and Empty from this list using stream
+
+        System.out.println("Removed Null and Empty Elements from List");
+        String[] empty = {"apple","orange","banana"," ", "water melon","graphs","berry",null,"strawberry"," ","berry",null};
+
+        List<String>lst = Arrays.asList(empty);
+
+        lst.stream()
+        .filter(str->str!=null && (!str.isEmpty()))
+        .forEach(System.out::println);
 
     }
 }
