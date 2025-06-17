@@ -4,6 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
+import java.util.*;
 
 public class StreamsQuestions
 {
@@ -86,7 +87,7 @@ public class StreamsQuestions
                   .forEach(System.out::println);
 
         //Find the longest Word in the list with uppercase
-        
+
         System.out.println("Find the longest Word in the list");
         List<String>long_word = Arrays.asList("apple","orange","banana","water melon","graphs","berry","strawberry","berry");
         String longestWor = long_word.stream()
@@ -119,5 +120,17 @@ public class StreamsQuestions
         .filter(str->str!=null && (!str.isEmpty()))
         .forEach(System.out::println);
 
+        //Count Frequency of String
+        System.out.println("Count Frequency of String");
+        
+        String[] word = {"apple","orange","banana","water melon","graphs","berry","strawberry","berry","apple"};
+
+        Map<String,Integer> wd = new HashMap<>();
+
+        for(String words : word)
+        {
+          wd.put(words, wd.getOrDefault(words,0)+1);
+        }
+        System.out.println(wd);
     }
 }
