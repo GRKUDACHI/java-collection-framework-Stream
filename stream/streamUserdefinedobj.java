@@ -30,14 +30,23 @@ public class streamUserdefinedobj
         emp.add(new Employee(542,"HR",20000,"Mumbai","guru"));
         
         //Find the employees belong to Karnataka city 
+        System.out.println("Find the employees belong to Karnataka city ");
         Predicate<Employee> pred  = em->em.getCity().equals("Karnataka");
-        // emp.stream()
-        // .filter(pred)
-        // .forEach(System.out::println);
+        emp.stream()
+        .filter(pred)
+        .forEach(System.out::println);
 
         //Find the Employee slary More than 40000
+        System.out.println("Find the Employee slary More than 40000");
         Predicate<Employee>  salary  = sl->sl.getSalary()>40000;
          emp.stream().filter(salary)
+        .forEach(System.out::println);
+
+
+         //Get Employees name with UpperCase
+        System.out.println("Get Employees name with UpperCase");
+         emp.stream().
+         map(emps->emps.getName().toUpperCase())
         .forEach(System.out::println);
     }
 }
