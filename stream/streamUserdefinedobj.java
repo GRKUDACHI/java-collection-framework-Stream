@@ -36,7 +36,7 @@ public class streamUserdefinedobj
         .filter(pred)
         .forEach(System.out::println);
 
-        //Find the Employee slary More than 40000
+        //Find the Employee salary More than 40000
         System.out.println("Find the Employee slary More than 40000");
         Predicate<Employee>  salary  = sl->sl.getSalary()>40000;
          emp.stream().filter(salary)
