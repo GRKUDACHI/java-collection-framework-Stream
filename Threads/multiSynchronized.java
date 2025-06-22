@@ -38,7 +38,7 @@ class sums
 
     public void increase_sum()
     {
-        synchronized(this)    //This method use two multiple variables 
+        synchronized(this)    //multiple multi variables  for synchronized method 
         {
             sum++;
         }
