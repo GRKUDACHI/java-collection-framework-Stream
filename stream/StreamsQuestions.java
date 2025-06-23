@@ -132,5 +132,62 @@ public class StreamsQuestions
           wd.put(words, wd.getOrDefault(words,0)+1);
         }
         System.out.println(wd);
+
+         //Removed Duplicate Numbers form Array
+        System.out.println("Removed Duplicate Numbers form Array ");
+        
+        List<Integer> list = Arrays.asList(1, 2, 2, 3, 4, 4, 5);
+
+        //first way
+        Set<Integer> set_num = new HashSet<>(list);
+        System.out.println(set_num);
+
+        //Another way
+        list.stream().distinct().forEach(System.out::println);
+
+       //make Map values in sorted form
+        System.out.println("make Map values in sorted form");
+
+        Map<String, Integer> map = new HashMap<>();
+        map.put("Apple", 3);
+        map.put("Banana", 1);
+        map.put("Orange", 2);
+
+        map.entrySet().stream()
+        .sorted(Map.Entry.comparingByValue())
+        .forEach(System.out::println);
+
+        //Find Frequency for elements or  Numbers form Array
+        System.out.println("Find Frequency for elements or  Numbers form Array");
+
+        int[] arr = {1, 2, 2, 3, 1, 1, 4};
+        Map<Integer, Integer> freq = new HashMap<>();
+
+        for(int num : arr)
+        {
+            freq.put(num, freq.getOrDefault(num,0)+1);
+        }
+        System.out.println(freq);
+
+        //Find Non-Repeating first Element  from Character or String
+        System.out.println("Find Non-Repeating first Element  from Character or String ");
+
+        String str = "aabbcde";
+        Map<Character,Integer>mp = new LinkedHashMap<>();
+
+        for(char st : str.toCharArray())
+        {
+            mp.put(st, mp.getOrDefault(st,0)+1);
+        }
+
+        for(Map.Entry<Character, Integer> entry :mp.entrySet())
+        {
+            if(entry.getValue() == 1)
+            {
+                System.out.println("first Non - Repeating "+entry.getKey());
+                break;
+            }
+        }
+    
     }
 }
